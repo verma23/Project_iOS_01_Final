@@ -13,10 +13,13 @@ class JashanTicketsViewController: UIViewController,UITableViewDataSource, UITab
     
     let mainDelegate = UIApplication.shared.delegate as! AppDelegate
 
+    
+    // sets the number of rows in table
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return mainDelegate.tickets.count
     }
     
+    //sets the height for the rows
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 120
     }
@@ -24,6 +27,7 @@ class JashanTicketsViewController: UIViewController,UITableViewDataSource, UITab
         
         
     }
+    // designs the cell layout
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let tableCell = tableView.dequeueReusableCell(withIdentifier: "cell") as? JashanCell ?? JashanCell(style: .default, reuseIdentifier: "cell")
         
@@ -39,6 +43,8 @@ class JashanTicketsViewController: UIViewController,UITableViewDataSource, UITab
         return tableCell
     }
     
+    
+    // determines the action when a cell is clicked
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let rowNum = indexPath.row
                 

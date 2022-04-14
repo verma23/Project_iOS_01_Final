@@ -879,7 +879,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8rH-d6-c4n">
-                                <rect key="frame" x="1" y="-6" width="388" height="44"/>
+                                <rect key="frame" x="0.0" y="-6" width="388" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem title="MoviePlex" id="huF-nS-cny">
@@ -974,7 +974,7 @@
                                 </connections>
                             </segmentedControl>
                             <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="H3F-ov-yJ7">
-                                <rect key="frame" x="117" y="290" width="236" height="111"/>
+                                <rect key="frame" x="117" y="290" width="235" height="111"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <date key="minimumDate" timeIntervalSinceReferenceDate="672141660">
                                     <!--2022-04-20 10:01:00 +0000-->
@@ -984,7 +984,7 @@
                                 </connections>
                             </datePicker>
                             <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hyv-Xh-QxM">
-                                <rect key="frame" x="117" y="478" width="256" height="120"/>
+                                <rect key="frame" x="117" y="478" width="254" height="120"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <connections>
                                     <outlet property="dataSource" destination="MvZ-GT-Iyw" id="sQZ-wG-V0T"/>
@@ -1065,6 +1065,8 @@
                                     <backgroundConfiguration key="background" image="ticket"/>
                                 </buttonConfiguration>
                                 <connections>
+                                    <action selector="removeMovieNameWithSender:" destination="MvZ-GT-Iyw" eventType="touchUpInside" id="wGs-bA-FzS"/>
+                                    <action selector="removeSeatsWithSender:" destination="MvZ-GT-Iyw" eventType="touchUpInside" id="ee2-CH-QYt"/>
                                     <segue destination="97s-Rl-lrM" kind="presentation" id="jwa-Oa-ztE"/>
                                 </connections>
                             </button>
@@ -1083,6 +1085,8 @@
                                     <backgroundConfiguration key="background" image="help"/>
                                 </buttonConfiguration>
                                 <connections>
+                                    <action selector="removeMovieNameWithSender:" destination="MvZ-GT-Iyw" eventType="touchUpInside" id="SaW-N3-Non"/>
+                                    <action selector="removeSeatsWithSender:" destination="MvZ-GT-Iyw" eventType="touchUpInside" id="Oeh-lo-2EH"/>
                                     <segue destination="W3R-j7-7Gi" kind="presentation" id="O6D-MU-zfp"/>
                                 </connections>
                             </button>
@@ -1101,6 +1105,8 @@
                                     <backgroundConfiguration key="background" image="register"/>
                                 </buttonConfiguration>
                                 <connections>
+                                    <action selector="removeMovieNameWithSender:" destination="MvZ-GT-Iyw" eventType="touchUpInside" id="UdD-gA-esi"/>
+                                    <action selector="removeSeatsWithSender:" destination="MvZ-GT-Iyw" eventType="touchUpInside" id="xZM-3c-beY"/>
                                     <segue destination="Ost-F9-Z9a" kind="presentation" id="N2d-CA-Sdp"/>
                                 </connections>
                             </button>
@@ -1119,6 +1125,8 @@
                                     <backgroundConfiguration key="background" image="login"/>
                                 </buttonConfiguration>
                                 <connections>
+                                    <action selector="removeMovieNameWithSender:" destination="MvZ-GT-Iyw" eventType="touchUpInside" id="mH8-G9-lZE"/>
+                                    <action selector="removeSeatsWithSender:" destination="MvZ-GT-Iyw" eventType="touchUpInside" id="Tuy-KO-PdJ"/>
                                     <segue destination="XYV-SC-lGi" kind="presentation" id="kAe-RP-kWM"/>
                                 </connections>
                             </button>
@@ -1138,6 +1146,7 @@
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="removeMovieNameWithSender:" destination="MvZ-GT-Iyw" eventType="touchUpInside" id="4M5-7E-jYX"/>
+                                    <action selector="removeSeatsWithSender:" destination="MvZ-GT-Iyw" eventType="touchUpInside" id="CuW-xq-Fta"/>
                                     <segue destination="BYZ-38-t0r" kind="presentation" id="r2R-Ck-0gT"/>
                                 </connections>
                             </button>
@@ -1156,6 +1165,8 @@
                                     <backgroundConfiguration key="background" image="account"/>
                                 </buttonConfiguration>
                                 <connections>
+                                    <action selector="removeMovieNameWithSender:" destination="MvZ-GT-Iyw" eventType="touchUpInside" id="Hvf-Yh-RAT"/>
+                                    <action selector="removeSeatsWithSender:" destination="MvZ-GT-Iyw" eventType="touchUpInside" id="On5-A8-BoS"/>
                                     <segue destination="HBl-Ks-om3" kind="presentation" id="0mP-38-c2G"/>
                                 </connections>
                             </button>
@@ -2588,13 +2599,13 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="wDi-X5-xfJ"/>
-        <segue reference="L1l-Up-GRo"/>
-        <segue reference="iKJ-np-4lz"/>
+        <segue reference="jwa-Oa-ztE"/>
+        <segue reference="0mP-38-c2G"/>
+        <segue reference="cw2-fj-YdO"/>
         <segue reference="uQD-2P-C4Z"/>
-        <segue reference="WOm-YS-Cbm"/>
-        <segue reference="EEj-fg-2V5"/>
-        <segue reference="cGj-9J-XbF"/>
+        <segue reference="kAe-RP-kWM"/>
+        <segue reference="N2d-CA-Sdp"/>
+        <segue reference="r2R-Ck-0gT"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="account" width="256" height="256"/>

@@ -10,14 +10,13 @@ import UIKit
 
 class JashanTicketDetailViewController: UIViewController {
     
-    @IBOutlet var lbName: UILabel!
-    @IBOutlet var lbTheatre: UILabel!
-    @IBOutlet var lbSeats: UILabel!
-    @IBOutlet var lbQuantity: UILabel!
-    @IBOutlet var lbType: UILabel!
-    @IBOutlet var lbDate: UILabel!
-    @IBOutlet var img: UIImageView!
-
+    @IBOutlet var lbName: UILabel!     // movie name label
+    @IBOutlet var lbTheatre: UILabel!  // theatre label
+    @IBOutlet var lbSeats: UILabel!    // ticket seats label
+    @IBOutlet var lbQuantity: UILabel! // ticket quantity label
+    @IBOutlet var lbType: UILabel!     // ticket type label
+    @IBOutlet var lbDate: UILabel!     // ticket date label
+    @IBOutlet var img: UIImageView!    // ticket image view
     
     override func viewDidLoad() {
         super.viewDidLoad()
